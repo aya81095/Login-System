@@ -46,7 +46,7 @@ function signup() {
     document.querySelector(".name-error").classList.add("d-none");
     document.querySelector(".email-error").classList.add("d-none");
     document.querySelector(".password-error").classList.add("d-none");
-    window.location.href = "../index.html";
+    window.location.href = "/index.html";
   }
 }
 
@@ -122,7 +122,7 @@ function login() {
       localStorage.setItem("user", JSON.stringify(users[i]));
       loginEmailInput.value = "";
       loginPasswordInput.value = "";
-      window.location.href = "../home.html";
+      window.location.href = "/home.html";
       return;
     }
   }
@@ -139,5 +139,5 @@ var user = JSON.parse(localStorage.getItem("user"));
 document.getElementById("userName").innerHTML = user.name;
 function logout() {
   localStorage.removeItem("user");
-  window.location.href = "../index.html";
+  window.location.href = "/index.html";
 }
